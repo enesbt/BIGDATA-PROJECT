@@ -89,7 +89,7 @@ spark_df  = vec.transform(parsed_df)
 
 df_with_predictions = model.transform(spark_df)
 
-selected_df = df_with_predictions.select(col("battery_power"),col("clock_speed"),col("px_height"),col("wifi"),col("blue"),col("features"),col("rawPrediction"),col("probability") ,col("prediction"),col("price_range"))
+selected_df = df_with_predictions.select(col("features"),col("rawPrediction"),col("probability") ,col("prediction"),col("price_range"))
 
 
 
